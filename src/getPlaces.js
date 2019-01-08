@@ -4,7 +4,7 @@ const { memoize } = require('cerebro-tools')
 const EXPIRATION = 30 * 60 * 1000
 
 const getPlaces = ({ keyword, location, lang }) => {
-  const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyA-O4pwGMszqqnKslBjG1ADC1Ol7HCyBd8&query=${encodeURIComponent(keyword)}&language=${lang}&location=${location}`
+  const url = `https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyA5JUepC4wTjVUOdk0vNgODVZcugiPu_-g&query=${encodeURIComponent(keyword)}&language=${lang}&location=${location}`
   return fetch(url)
     .then(response => response.json())
     .then(json => json.results)
